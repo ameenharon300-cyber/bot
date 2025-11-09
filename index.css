@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-teko {
+  font-family: 'Teko', sans-serif;
+}
+
+.bg-brand-dark-blue {
+  background-color: #1A1F36;
+}
+
+.bg-lines-pattern {
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.03) 75%);
+  background-size: 20px 20px;
+}
+
+.jackpot-bar {
+  @apply bg-gradient-to-b from-yellow-500 to-yellow-700 border-2 border-yellow-300 rounded-md px-4 py-1 shadow-lg;
+}
+
+.jackpot-text {
+  @apply text-black font-bold text-lg tracking-widest;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs {
+  font-family: sans-serif;
+}
+
+.goal-text {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fefcbf,
+    0 0 20px #fefcbf,
+    0 0 25px #fefcbf,
+    0 0 30px #fefcbf,
+    0 0 35px #fefcbf;
+}
+
+.goal-graphic {
+  background-image: radial-gradient(circle, transparent 40%, #FFD700 100%);
+  mask-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 10px,
+    black 10px,
+    black 20px
+  );
+  -webkit-mask-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 10px,
+    black 10px,
+    black 20px
+  );
+}
+
+.bet-choice-button {
+  @apply w-full flex items-center justify-between p-3 rounded-md text-2xl font-bold transition-all duration-300 ease-in-out transform disabled:opacity-50 disabled:cursor-not-allowed;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.bet-choice-button.selected {
+  @apply ring-4 ring-yellow-400 scale-105;
+}
+
+.bet-choice-circle {
+  @apply w-8 h-8 rounded-full border-2 border-white/50 bg-black/20 transition-all;
+}
+
+.bet-choice-button.selected .bet-choice-circle {
+  @apply bg-yellow-400 border-white;
+}
+
+.bg-green-gradient {
+  background-image: linear-gradient(to right, #16a34a, #22c55e);
+}
+.bg-red-gradient {
+  background-image: linear-gradient(to right, #dc2626, #ef4444);
+}
+.bg-olive-gradient {
+  background-image: linear-gradient(to right, #65a30d, #84cc16);
+}
+
+.place-bet-button {
+  @apply w-full max-w-xs px-6 py-3 font-bold text-xl rounded-md transition-transform hover:scale-105 shadow-lg;
+}

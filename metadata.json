@@ -1,0 +1,6 @@
+{
+  "name": "AI GOAL Predictor",
+  "description": "Upload a match image and use AI to predict the outcome. Place your bet and test your luck!",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
